@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title>HTML Forms</title>
+</head>
+
+
+<body>
+    <h1>HTML Forms</h1>
+
+    <form>
+        <!-- This attaches the label to id username -->
+        <label for="username">Enter username:</label>
+        <!-- The ID attribute is an identifier for this tag-->
+        <input type="text" id="username">
+        <br>
+        <br>
+        <!-- E-mail field-->
+        <label for="email">Enter mail:</label>
+        <input type="email" id="email" name="email">
+        <br>
+        <br>
+        <!-- Password field-->
+        <label for="password">password:</label>
+        <input type="password" id="password" name="password">
+        <br>
+        <br>
+    </form>
+
+    <!-- These are radio buttons-->
+
+    <form action="">
+        <input type="radio" name="gender" value="male">Male<br>
+        <input type="radio" name="gender" value="female">Female<br>
+        <input type="radio" name="gender" value="other">Other<br>
+
+    </form>
+
+    <!-- Select Box / aka Dropdown box-->
+    <p>Enter your age:</p>
+    <input type="radio" name="age" value="0-25" id="option1">
+    <label for="option1">0-25</label>
+
+    <input type="radio" name="age" value="26-50" id="option2">
+    <label for="option2">0-25</label>
+
+    <br>
+    <br>
+
+    <!-- Select Box / aka Dropdown box-->
+    <label for="question">Security question:</label>
+    <select name="question" id="question">
+        <option value="q1">What colour are your favorite pair of socks?</option>
+        <option value="q2">Favorite dinosaur?</option>
+        <option value="q3">Meaning of life?</option>
+    </select>
+
+    <br>
+    <br>
+
+    <label for="answer">Security question answer:</label>
+    <input type="text" id="answer" name="answer">
+
+    <br>
+    <br>
+
+    <!-- Text field -->
+    <label for="bio">Your bio:</label><br>
+    <textarea name="bio" id="bio" rows="10" placeholder="About you..."></textarea>
+    <br>
+    <br>
+    <input type="submit" value="submit the form">
+</body>
+
+
+
+</html>
