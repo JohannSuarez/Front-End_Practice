@@ -1,0 +1,80 @@
+/* 
+
+Write the definitions. You need to have
+a solid grasp of the fundamental terms. 
+
+
+    Style Sheet - A list of css rules / rule sets.
+
+    Declaration Block - A section of CSS where 
+    the property/value pairs apppear.
+    It's the code found between the curly braces.
+
+    Declaration - A single line of CSS that is within the
+    curly braces, whether shorthand or longhand.
+
+*/
+
+body {
+    background-color: rgba(0, 4, 14, 0.87);
+}
+
+
+/* Using an ID as a hook, to single out a tag just like how classes do.
+
+You can use IDs as a hook, but you can't reuse an ID for another tag.
+*/
+
+
+#content {
+    background-color: rgba(3, 39, 56, 0.575);
+}
+
+p.success {
+    color:rgba(0, 255, 76, 0.986)
+}
+
+p.success.feedback {
+    border: 1px dashed;
+    color:rgba(0, 174, 255, 0.925)
+}
+
+
+
+/* This will style all tags with class "error" */
+.error {
+
+    color:rgba(0, 218, 247, 0.829)
+}
+
+/* This will style JUST div p tags with class "error" */
+div.error {
+    color:rgb(1, 114, 57)
+}
+
+h1 {
+    color: rgb(236, 169, 43);
+    background-color: slategray;
+    font-size: 20px;
+    text-decoration: underline;
+    font-family: arial;
+    text-align: center;
+}
+
+p {
+    color: slategray;
+    text-align: right;
+    line-height: 30px;
+    letter-spacing: 3px;
+    column-count: 2;
+    column-gap: 60px;
+}
+
+/* Using "attribute" selectors */
+
+
+
+/* This will look for an anchor tag with an href attribute */
+a[href]{
+    background-color:rgba(99, 206, 153, 0.274)
+}
