@@ -1,0 +1,129 @@
+body, ul, li, h1, h2, a{
+    /* A CSS property reset */
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+}
+
+header { 
+    background-color:rgb(41, 92, 151);
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    /* Think: Layers like in photoshop, the bigger the number, the higher it is placed
+    forward. */
+    width: 100%;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+
+
+
+    /*
+    left: 100px; 
+    top: 100px;
+    */
+    
+}
+
+header h1 {
+    color: rgb(0, 225, 255);
+    font-family:courier;
+    border: 4px solid rgba(255, 255, 255, 0.493);
+    padding: 6px 12px;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.banner {
+    position: relative;
+}
+
+.banner img {
+    /* To ensure the banner can only be
+    max width of 100% of the user's screen. */
+    max-width: 100%;
+}
+
+.banner .welcome {
+
+    /* When we position something absolutely,
+    we take it out of normal document flow,
+    and we lose that space that it was
+    originally in. The space is then eaten up by
+    rest of the content underneath it.*/
+    color: rgb(0, 225, 255);
+    position: absolute;
+    background-color: rgba(0, 14, 139, 0.336);
+    left: 2%;
+    top: 20%;
+    padding:5px 20px 5px 20px; /*top, right, bottom, left */
+}
+
+.banner h2 {
+    font-size: 20px;
+    letter-spacing: 4px;
+}
+
+.banner h2 span {
+    font-size: 1.3em;
+    font-family:courier;
+}
+
+nav{
+    background-color:rgb(41, 92, 151);
+    width: 100%;
+    padding: 10;
+    position: sticky;
+    top: 88px;
+}
+
+nav ul{
+    white-space: nowrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav li{
+    width: 25%;
+    display: inline-block;
+    font-size: 24px;
+    padding: 20px;
+}
+
+nav li a{
+    text-decoration: none;
+    color:rgb(0, 225, 255);
+}
+
+main {
+    max-width: 100%;
+    width: 1200px;
+    margin: 80px auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+article h2{
+    color:rgb(6, 31, 59);
+    font-size: 40px;
+}
+
+article p{
+    line-height: 2em;
+    color: rgb(24, 34, 78)
+}
+
+.images {
+    text-align: center;
+    margin: 80px 0;
+}
+
+.images li{
+    display: inline-block;
+    width: 40%;
+}
+
+.images li img {
+    max-width: 100%;
+}
