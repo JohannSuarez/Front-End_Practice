@@ -5,7 +5,7 @@ body, ul, li, h1, h2, a{
     font-family: arial;
 }
 
-header { 
+header {
     background-color:rgb(41, 92, 151);
     padding: 15px;
     text-align: center;
@@ -20,10 +20,10 @@ header {
 
 
     /*
-    left: 100px; 
+    left: 100px;
     top: 100px;
     */
-    
+
 }
 
 header h1 {
@@ -33,6 +33,7 @@ header h1 {
     padding: 6px 12px;
     display: inline-block;
     border-radius: 10px;
+    margin-top: 0;
 }
 
 .banner {
@@ -43,6 +44,7 @@ header h1 {
     /* To ensure the banner can only be
     max width of 100% of the user's screen. */
     max-width: 100%;
+    border: 0px;
 }
 
 .banner .welcome {
@@ -70,12 +72,15 @@ header h1 {
     font-family:courier;
 }
 
+
 nav{
+    margin-top: -10px; /* Gets rid of annoying gap. Goddamn, it actually worked! */
     background-color:rgb(41, 92, 151);
     width: 100%;
     padding: 10;
     position: sticky;
     top: 88px;
+    border: 0%;
 }
 
 nav ul{
@@ -126,4 +131,110 @@ article p{
 
 .images li img {
     max-width: 100%;
+}
+
+.join {
+    background: #F4F4F4;
+    text-align: center;
+    padding: 60px 20px;
+    color: #4b4b4b;
+}
+
+.join h2{
+    font-size: 36px;
+
+}
+
+form input {
+    margin: 20px 0;
+    padding: 10px 20px;
+    font-size: 24px;
+    border: 4px solid white;
+}
+
+footer {
+    background: rgb(41, 92, 151);
+    text-align: center;
+    padding: 10px;
+    color: rgb(0, 225, 255);
+}
+
+/* PSEUDO CLASSES*/
+
+nav li a:hover {
+   text-decoration: underline;
+}
+
+.images li:hover {
+    position: relative;
+    top: -4px;
+}
+
+form input:focus {
+    border: 4px dashed cadetblue;
+    outline: none;
+}
+
+form input:valid {
+    border: 4px solid green;
+
+}
+
+/* First child example
+nav li:first-child{
+    border: 3px solid orangered;
+}
+*/
+article p::first-line {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+section.join p::first-letter {
+    font-size:1.5em;
+}
+
+section.join p::selection {
+    background-color: rgba(1, 66, 110, 0.473);
+}
+
+p::selection {
+    background-color: gba(1, 66, 110, 0.473);
+    color: rgb(38, 1, 247);
+}
+
+p::after {
+    content: '...'
+}
+
+/* Responsive styles (Media Queries) */
+
+@media screen and (max-width: 1400px) {
+
+    /* Basically says "When the screen width reaches 1400px or below, 
+    you will apply these styles */
+    
+    .banner .welcome h2{
+        
+        font-size: 20px;
+    }
+
+    nav li {
+        font-size: 18px; 
+
+    }
+
+}
+
+@media screen and (max-width: 960px) {
+
+    /* Basically says "When the screen width reaches 1400px or below, 
+    you will apply these styles */
+    
+    .banner .welcome h2{
+        
+        font-size: 10px;
+    }
+
+
 }
