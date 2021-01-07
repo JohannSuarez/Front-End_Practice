@@ -1,83 +1,51 @@
-<!DOCTYPE html5> <!-- Doctype tag. Tells the browser to render this file as  html5-->
+<!-- The doctype declaration tells the browser how this document
+should be interpreted and rendered, in this case it's HTML. -->
+<!DOCTYPE html>
 
-<html> <!-- Acts like a main -->
-<head> <!-- Head contains extra information about the website 
-    such as metadata or the title.-->
+<!-- This html attribute declares that this document language is English.
+This helps search engine refine results based on language, and also aids
+the user's browser translator. -->
+<html lang="en">
+
+
+<!-- The head section contains all the non-visual yet important elements
+for the document. It contains information about the webpage itself. -->
+<head>
+    <!-- This meta attribute ensures that this document utilizes unicode.
+    By doing this, the browser can properly render a wide range of characters
+    from various countries and regions, ultimately making this document 
+    readable by anyone in the world.
+    !-->
+    <meta charset="UTF-8"> 
     
-    <title>Learning HTML</title>
-
-</head> 
-<body> <!-- The things we "see inthe browser "-->
-
-    <!-- Div tag (division)-->
-    <div>
-        <p>Hello <strong>world</strong>   <!-- Strong tag makes something bold --></p>
-        <p>And you say, <small>it</small> works like fire around the brim.</p>
-        <a href="https://www.youtube.com/watch?v=5bfseWNmlds">The song</a>
-        <a href="about.html">About us page.</a>
-    </div>
-
-
-    <div> <!-- Div tag (division)-->
-    <!-- Below are heading tags -->
-        <h1>heading 1</h1>
-        <h2>heading 2</h2>
-        <h3>heading 3</h3>
-        <h5>heading 5</h5>
-        <h6>heading 6</h6>
-    </div>
-
-
-    <!-- UL, or unordered list-->
-    <ul>
-        <li>sleepy</li>
-        <li>head</li>
-    </ul>
-
-
-
-    <!-- OL, or ordered list-->
-    <ol>
-        <li>sleepy</li>
-        <li>head</li>
-    </ol>
-
-    <!--BR tag-->
-    <p>Use of the break<br> tag.</p>
-
-    <!-- HR tag (Horizontal Rule)-->
-    <hr>
-    <p>There should be a horizontal line above this text.</p>
-    
-    <!-- img tag. First time we've used a tag attribute (src).-->
-    <img src="img/lena.jpg" alt="Lena. Not the controversial one." width="500" height="400">
-
-
-    <!-- Block quote.-->
-    <blockquote cite="Percy Shelley's Ozymandias">
-        I met a traveller from an antique land
-        Who said: Two vast and trunkless legs of stone
-        Stand in the desert. Near them, on the sand,
-        Half sunk, a shattered visage lies, whose frown,
-        And wrinkled lip, and sneer of cold command,
-        Tell that its sculptor well those passions read
-        Which yet survive, stamped on these lifeless things,
-        The hand that mocked them and the heart that fed:
-        And on the pedestal these words appear:
-        'My name is Ozymandias, king of kings:
-        Look on my works, ye Mighty, and despair!'
-        Nothing beside remains. Round the decay
-        Of that colossal wreck, boundless and bare
-        The lone and level sands stretch far away.
-    </blockquote>
-
-    <!-- Style attribute. Orange color-->
-    <p style="color: orange;"> Orange text ;-;</p>
-
-
+    <!-- This meta attribute makes sure our webpage is presented in a width that
+    depends on the user's device.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
 
+    <title>Template</title>
+</head>
+<body>
 
+    <!-- Notes, use css to modify inter-character spacing, 
+    background (maybe use a gradient), row spacing, and column (1 for each paragraph)-->
 
+    <h2>About Me: s</h2>
+
+    <h3>History:</h3>
+    <p>Welcome to my HTML page. My name is <strong>Johann Suarez</strong>, born and raised 
+        in the Philippines. By 2018, I emigrated here and immediately began
+        studying in VIU. I'm currently in my second year of Computer Science.
+        I like Mathematics, Programming, and Computer Graphics.
+        These areas of interest give my life meaning, and it's when a project/endeavor
+        makes them all intertwine that <em>I feel truly grateful for existing.</em>
+    </p>
+
+    <h3>Interests:</h3>
+    <p>By the grace of God and a close friend of mine, I had to learn HTML/CSS/JS
+        during the December break. So this task is relatively easy.
+        The creative freedom allowed to us makes this course something to
+        really look forward to, and I'm excited to meet everybody
+    </p>
 </body>
 </html>

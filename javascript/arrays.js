@@ -29,3 +29,9 @@ console.log(ninjas);
 
 ninjas = ninjas.push('embrz');
 console.log(ninjas);
+
+result3 = random.pop(); 
+// ninjas won't pop at this point
+// because it became an int, taking the return of push.
+
+console.log(result3);
