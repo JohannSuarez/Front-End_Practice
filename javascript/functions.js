@@ -63,6 +63,9 @@ people.forEach(function(person) {
 */
 
 // Callback, Arrow function version
+
+// The function is actually what you see between
+// the curly brackets. It's made on the fly.
 people.forEach((person) => {
     console.log(person);
 } );
