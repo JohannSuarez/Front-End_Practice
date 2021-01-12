@@ -1,0 +1,4 @@
+
+html { height: 100%; }
+body { background-image: linear-gradient(rgb(194, 224, 217), rgb(52, 101, 116)); }
+body { background-attachment: fixed; }
