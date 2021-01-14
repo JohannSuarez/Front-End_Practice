@@ -1,29 +1,19 @@
-// Get an element by ID
-const title = document.getElementById('page-title');
-// Note: We didn't need the hash symbol as we did in query selector (#page-title).
-// It's already implied to be an ID by using this method.
 
-console.log(title);
+//-------- Changing the href attribute of a, and the innertext ----//
+const link = document.querySelector('a');
 
-// Get elements by their class name
-const errors = document.getElementsByClassName('error');
-// Note: We didn't need the dot as we did in query selector (.error).
-// It's already implied to be a class by using this method.
-console.log(errors);
-console.log(errors[0]);
+console.log(link.getAttribute('href'));
 
-/* Notice that errors contains a HTMLCollection object,
-   instead of a NodeList from QuerySelector. 
-   
-   Like NodeList we can still use square bracket notation to 
-   get an element from HTMLCollection. But we can't use forEach.
-*/
+link.setAttribute('href', 'https://www.thenetninja.co.uk');
+
+link.innerText = "The net ninja website";
 
 
+//--------- Another example --- //
+// Getting, setting, and adding p attributes.
 
-// Get elements by their tag name
+const mssg = document.querySelector('p');
 
-const paras = document.getElementsByTagName('p');
-// We're grabbing the paragraph elements.
-console.log(paras);
-console.log(paras[1]);
+console.log(mssg.getAttribute('class'));
+mssg.setAttribute('class', 'success');
+mssg.setAttribute('style', 'color:green;');
