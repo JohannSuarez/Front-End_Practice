@@ -1,4 +1,29 @@
 
-html { height: 100%; }
-body { background-image: linear-gradient(rgb(194, 224, 217), rgb(52, 101, 116)); }
-body { background-attachment: fixed; }
+html{ 
+    height: 100%;
+}
+
+
+body{ 
+    background-image: linear-gradient(rgb(125, 141, 137), rgb(52, 101, 116));
+}
+
+
+body{
+    background-attachment: fixed;
+}
+
+
+
+.error{
+    padding: 10px;
+    color: crimson;
+    border: 1px dotted crimson;
+}
+
+
+.success{
+    padding: 10px;
+    color: limegreen;
+    border: 1px dotted limegreen;
+}

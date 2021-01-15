@@ -1,0 +1,1 @@
+A nodetree is a visual representation of the DOM
