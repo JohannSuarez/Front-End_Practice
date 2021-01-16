@@ -14,7 +14,6 @@ body{
 }
 
 
-
 .error{
     padding: 10px;
     color: crimson;
@@ -26,4 +25,14 @@ body{
     padding: 10px;
     color: limegreen;
     border: 1px dotted limegreen;
+}
+
+
+li {
+    list-style-type: none;
+    max-width: 200px;
+    padding: 8px;
+    margin: 8px auto;
+    background: rgb(132, 217, 238);
+    border: 1px dotted #ddd;
 }

@@ -1,50 +1,35 @@
-const content = document.querySelector('p');
+const button = document.querySelector('button');
 
-console.log(content.classList);
+// -- Adding an event listener to a button.
 
-
-// This is how you add a class
-// content.classList.add('error');
-
-// This is how you remove a class
-// content.classList.remove('error');
-
-
-// Adding success class
-//content.classList.add('success');
-
-
-
-// --------------------------- Exercise ---------------------------------------
-
-/* Exercise. You are tasked with gathering all of the p elements,
-   and then changing its class based on whether or not it has "error" or
-   "success" in its text.
-*/
-
-
-/* This query selector selects all of the tags you input.
- In this case, all the p tags in our html will be selected,
- and put into paras. */ 
- const paras = document.querySelectorAll('p');
-
- paras.forEach(para => {
-
-    // How do you get just what's in the tags again?
-    console.log(para.innerText); // Yes this is how you do it.
-    
-    if(para.innerText.includes("success")) {
-        para.classList.add("success");
-    } else if (para.innerText.includes("error")) {
-        para.classList.add("error");
-    }
-
+button.addEventListener('click', () => {
+    console.log('You clicked me');
 });
 
-//---- Toggle method. Just a different way of adding or removing a class. ----//
 
 
-const title = document.querySelector('.title');
+// This will get us a nodelist of all the tags.
+const items = document.querySelectorAll('li');
 
-title.classList.toggle('test');
-title.classList.toggle('test');
+/* A forEach loop that adds an event listener to
+   each of the li tag.
+*/
+items.forEach(item => {
+
+    // Giving each <li> tag a click event
+    item.addEventListener('click', e => {
+
+        /* Inside this callback function,
+           the browser automatically gives us a parameter
+           called e or event (but you can call it whatever).
+           It's an event object, contain information about the
+           event that happened.
+        */
+
+
+        //console.log('item clicked');
+        //console.log(e); // Reveals all the properties of the event object.
+        console.log(e.target); // Tells us which element we clicked on.
+        e.target.style.textDecoration = 'line-through';
+    });
+});
