@@ -1,6 +1,5 @@
 <html lang="en">
 <head>
-    <!-- <link rel="stylesheet" href="style.css"> !-->
     <meta charset="UTF-8">
     <meta name="viewport", initial-scale="1.0">
     <meta http-equiv="X-UA-Compatible content="ie-edge">
@@ -21,17 +20,31 @@
         <li>see Gabrielle</li>
     </ul>
 
-    <button>click me</button>
+    <button>Add New Todo</button>
 
     <script>
 
-//--------------------| Begin of JS |------------------//
+//-----------------| Begin of  JavaScript code |------------------//
 
+        // Quick and dirty way to get rid of an element.
+        const ul = document.querySelector('ul');
+        // ul.remove();
 
         const button = document.querySelector('button');
         // -- Adding an event listener to a button.
         button.addEventListener('click', () => {
-            console.log('You clicked me');
+
+            // One way to add to the list.
+            // ul.innerHTML += '<li>something new</li>';
+
+            // Another way to add, via creating an element.
+            const li = document.createElement('li');
+            li.textContent = 'something new to do';
+            ul.append(li);     // Appending adds it to the end of the list.
+            // ul.prepend(li); // Prepending adds it to the start of the list.
+
+            // However, no event listeners get attached to these new buttons.
+            // This is what 'event bubbling' and delegation is for.
         });
 
         // This will get us a nodelist of all the tags.
@@ -44,18 +57,9 @@
             // Giving each <li> tag a click event
             item.addEventListener('click', e => {
 
-                /* Inside this callback function,
-                the browser automatically gives us a parameter
-                called e or event (but you can call it whatever).
-                It's an event object, contain information about the
-                event that happened.
-                */
-
-
-                //console.log('item clicked');
-                //console.log(e); // Reveals all the properties of the event object.
-                console.log(e.target); // Tells us which element we clicked on.
-                e.target.style.textDecoration = 'line-through';
+                // This is how you remove an element from the DOM
+                e.target.remove();
+                
             });
         });
 

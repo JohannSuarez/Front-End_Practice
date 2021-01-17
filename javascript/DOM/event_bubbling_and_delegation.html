@@ -1,0 +1,79 @@
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport", initial-scale="1.0">
+    <meta http-equiv="X-UA-Compatible content="ie-edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+
+    <h1 class="title">To do's</h1>
+
+
+    <ul>
+        <li>buy milk</li>
+        <li>read book</li>
+        <li>play the guitar</li>
+        <li>pay bills</li>
+        <li>see Gabrielle</li>
+    </ul>
+
+    <button>Add New Todo</button>
+
+    <script>
+
+//-----------------| Begin of  JavaScript code |------------------//
+
+
+        // Quick and dirty way to get rid of an element.
+        const ul = document.querySelector('ul');
+        // ul.remove();
+
+        const button = document.querySelector('button');
+        // -- Adding an event listener to a button.
+        button.addEventListener('click', () => {
+
+
+            // Another way to add, via creating an element.
+            const li = document.createElement('li');
+            li.textContent = 'something new to do';
+            ul.append(li);     // Appending adds it to the end of the list.
+
+
+        });
+
+  
+    
+        /* Code block where we attach an event listener to each one.
+
+        const items = document.querySelectorAll('li');
+        items.forEach(item => {
+
+            item.addEventListener('click', e => {
+
+                console.log('li clicked');
+
+                // This will stop the event from bubbling out into its parent UL.
+                e.stopPropagation(); 
+                e.target.remove();
+                
+            });
+        });
+        */
+
+        ul.addEventListener('click', e => {
+
+            /* "If an event happens in UL, and it turns out to be
+            an event from an <li> element, we remove it. */
+                
+            if(e.target.tagName === 'LI') {
+                e.target.remove();
+            }
+        });
+
+
+    </script>
+</body>
+</html>
