@@ -48,6 +48,20 @@ form.addEventListener('submit', e => {
     
     scrollTo(0,0);
 
+    let output = 0;
+    
+    const timer = setInterval( () => {
+    score_show.querySelector('span').textContent = `${output}%`;
+
+        if(output === score ) {
+            clearInterval(timer);
+        } else {
+            output++;
+        }
+
+    }, 10 );
+
+
 });
 
 // window object (global object)
@@ -72,3 +86,18 @@ window.console.log('hello');    // Same thing
 console.log(document.querySelector('form'));
 // is the same as...
 console.log(window.document.querySelector('form'));
+
+/*
+
+//    A five second timer
+//    to demonstrate intervals.
+
+let i = 0;
+const timer = setInterval( () => {
+    console.log('hello.');
+    i++;
+    if(i == 5) {
+        clearInterval(timer);
+    };
+}, 1000);
+*/
