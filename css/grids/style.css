@@ -1,0 +1,16 @@
+.wrapper {
+    display:grid;
+    grid-template-columns: 70% 30%;
+    /* grid-column-gap: 1em; */
+    grid-gap: 1em;
+}
+
+.wrapper > div {
+    background: rgb(111, 114, 114);
+    padding: 1em;
+
+}
+
+.wrapper > div:nth-child(odd) {
+    background: #ddd;
+}
